@@ -34,5 +34,17 @@ namespace CAlculadora.Controllers
         {
             return a - b;
         }
+        [HttpGet]
+        [Route("multi")]
+        public int multiget(int a, int b)
+        {
+            return a * b;
+        }
+        [HttpPost]
+        [Route("multi")]
+        public int multipost([FromHeader] int a, [FromHeader] int b)
+        {
+            return a * b;
+        }
     }
 }
