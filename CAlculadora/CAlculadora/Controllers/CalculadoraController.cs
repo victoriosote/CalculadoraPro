@@ -46,5 +46,17 @@ namespace CAlculadora.Controllers
         {
             return a * b;
         }
+        [HttpGet]
+        [Route("div")]
+        public float divget(float a, float b)
+        {
+            return a / b;
+        }
+        [HttpPost]
+        [Route("div")]
+        public float divpost([FromHeader] float a, [FromHeader] float b)
+        {
+            return a / b;
+        }
     }
 }
