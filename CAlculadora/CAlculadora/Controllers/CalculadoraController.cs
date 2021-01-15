@@ -11,14 +11,28 @@ namespace CAlculadora.Controllers
     public class CalculadoraController : Controller
     {
         [HttpGet]
+        [Route("suma")]
         public int sumaget(int a, int b)
         {
             return a + b;
         }
         [HttpPost]
+        [Route("suma")]
         public int sumapost([FromHeader] int a, [FromHeader] int b)
         {
+            return a - b;
+        }
+        [HttpGet]
+        [Route("resta")]
+        public int restaget(int a, int b)
+        {
             return a + b;
+        }
+        [HttpPost]
+        [Route("resta")]
+        public int restapost([FromHeader] int a, [FromHeader] int b)
+        {
+            return a - b;
         }
     }
 }
